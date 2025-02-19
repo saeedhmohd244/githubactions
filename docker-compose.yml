@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  frontend:
+    image: navasck/devtinder-react
+    ports:
+      - "81:81"
+    depends_on:
+      - backend
+    restart: always
+
+  backend:
+    image: navasck/devtinder-node
+    ports:
+      - "7778:7778"
+    restart: always
